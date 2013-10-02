@@ -1,0 +1,190 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+
+<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" NOSAVE >
+<tr NOSAVE>
+<td COLSPAN="2" NOSAVE style="BACKGROUND-COLOR: lightskyblue">&nbsp;<a href="http://www.dcs.shef.ac.uk/~jon">Jon BARKER</a>: <a href="http://www.dcs.shef.ac.uk/~jon/teaching.html">Teaching</a>: <a href="http://www.dcs.shef.ac.uk/~jon/campus_only/teaching/COM4120">AVSP ART</a>: Assignment</td>
+
+</tr>
+</table>
+
+<BODY TEXT="#000000" BGCOLOR="#FFFFFF" >
+
+
+</tr>
+</table>
+
+<BODY TEXT="#000000" BGCOLOR="#FFFFFF" >
+
+<center>
+<h1> Audio-Visual Speech Processing ART: Assessment
+	</h1>
+</center>
+      
+The course will be assessed by:
+	  
+<ul>
+<li>a practical assignment [below] (70% of the marks),
+<!-- <li>a <a href="../questions/questions.html">written exercise</a>  (1/3 of the marks - roughly 6 hours). -->
+ <li>a short essay, available in week 9 (30% of the marks).
+</ul>
+
+<hr>
+
+	  <h2> Practical Assignment</h2>
+
+<center>
+	<h2> <FONT COLOR="#FF0000"> Hand in date: Monday 3rd December </FONT> </h2>
+</center>
+
+<HR size=2 noshade align=center> 
+
+	<h2>The Practical: Eigenface-based Face Detection</h2>
+
+<p>
+The practical will involve using MATLAB to experiment with the Eigenface-based face detection technique described in <a href="jcn.pdf">Turk and Pentland</a> (1991) (or here - <a href="mturk-CVPR91.pdf">Turk and Pentland</a> (1991b) ). Face data from AT&T Laboratories,Cambridge is supplied for generating the Eigenfaces and your system will be tested using data from the <a href="http://www.dcs.shef.ac.uk/spandh/projects/m4/">M4 (Multimodal Meeting Manager)</a> project. Most of the MATLAB code that you will need has been written for you.
+
+You are asked to perform several experiments with the technique, and are provided with guidelines for writing up your results.
+
+<h3> Details </h3>
+
+<h3> 1. The Training Data </h3>
+<p>
+The AT&T Labs face database consists of 400 face images collected from 40 different subjects. The full database is rather large, however <a href="faces.tif">this downsampled preview image</a> of the database is sufficient for this assignment. The preview is a single image showing each of the 400 faces in a 20 by 20 grid, with each face having a dimension of 46 pixels wide by 56 pixels high. 
+<p>
+
+Download and save the face image data.
+
+Use the provided <a href="loadfaces.m">loadfaces.m</a> to load the image data into MATLAB.
+
+		  
+<h3> 2. Generating the Eigenfaces </h3>
+<p>
+Use the provided <a href="eigenface.m">eigenface.m</a> to compute eigenfaces based on the first 200 images of the training data. The second 200 images should be reserved for testing.
+<p>
+Use <a href="calc_meanface.m">calc_meanface.m</a> to calculate the mean face from the first 200 faces of the training data.
+<p>
+Use <a href="display_eigenface.m">display_eigenface.m</a> to display and return the 1st, 2nd and 3rd eigenfaces.
+
+<p>
+Investigate the effect of moving from the mean face along each principle axis, i.e. take the mean face and add or subtract each of the first three eigenfaces in turn. By multiplying the eigenfaces by a scalar before adding them to the mean face you can control the distance moved along the principle axis. What effect does movement along each principle axis have on the appearance?
+
+
+<h3> 3. Distance From Face Space (DFFS)</h3>
+
+Use the provided <a href="project.m">project.m</a> to project faces from the face database into face space. Then use the provided <a href="distance.m">distance.m</a> to measure the distance between the original image and the face space projection, i.e. the `Distance From Face Space' (DFFS).
+<p>
+Test this with some of the 400 faces provided. Experiment with the project.m parameter <em>n</em>, which controls the number of eigenfaces used to define the face space. What effect does this have on the distances?
+<p>
+Look at the distances for the first 200 faces (those that you used to compute the eigenfaces) and the second 200 unused faces. Is there a difference? If so why?
+<p>
+Take an image from the training data and measure how DFFS varies when the image is reflected either horizontally or vertically. Measure also how DFFS changes as a function of brightness and contrast. Try shifting the face images by a few pixels in each direction. How sensitive is the DFFS to small translations of the face? Take a face and simulate the effect of the face being occluded by another object by setting a region of pixels to 0 (e.g. zero out a single row or column of pixels). What effect does this have on the DFFS? Try measuring DFFS for some random images, or images that are clearly not faces. 
+
+
+<h3> 4. Searching for Faces </h3>
+<p>      
+Faces may be detected in a scene by computing a "DFFS map". A 46x56 subimage is taken at each hypothesised face position in the test data. The subimage is projected onto face space and the distance between the original image and the projection (the "Distance From Face Space") is computed.
+
+Face-like subimages should have a small DFFS and appear as local minima in the DFFS map.
+
+<p>
+The <a href="search.m">search.m</a> code provided will produce a DFFS map for a given image.
+
+<p>
+Try testing the face search on part of the face database <a href="faces.tif">image</a>. (Note, the search.m code displays the subimages it is processing and face space images as it runs. This slows it down. Edit search.m and remove the `imagesc' statements if you wish to speed it up).
+
+<p>
+The search scans the subimage across the scene by a single pixel at a time. This makes it very slow. Consider the sensitivity of the DFFS to small translations of the face image that you measured in the previous section. Do you think that scanning in one pixel steps is necessary? Change search.m to increase the step sizes and speed up the search. Increasing the step size reduces the precision of the search. How might you implement a faster search without losing the pixel precision of the original version of search.m?
+
+<p>
+The function <a href="distance.m">distance.m</a> computes a Euclidean distance. Is this a suitable distance to employ? Try experimenting with other common distance metrics.
+      
+<h3> 5. Applying the System to the M4 Data </h3>
+
+This <a href="m4_image.bmp">image</a> is real data that has been collected for a multimodal processing project. The image has been conveniently scaled so that the faces are roughly the same size as those in the AT&T training data. Use the provided <a href="load_testscene.m">load_testscene.m</a> to read the image in to MATLAB. Try using the search code to locate the two faces.
+<p>
+What problems do you encounter?
+<p>
+Some non-face regions have a low DFFS making the faces hard to detect. Which regions of the image are causing problems? Can you think of any changes to the technique described by Turk and Pentland that may be used to get your system to work more reliably on the M4 data? 
+<p>
+What other techniques might suitably be used in conjunction with the Eigenface DFSS technique in a realtime face tracking system?
+
+      
+<h3> 6. Writing up the Assignment </h3>
+
+Your write up should be strictly no more than 10 sides (including all figures, graphs, tables etc) and should contain the following sections: 
+
+<ul>
+<li><b>Introduction</b>. Describe what is meant by face detection. Explain why it is a challenging problem. Present a brief review of techniques that are commonly employed (extra credit will be awarded for evidence that you have read beyond the lecture notes!).  [10]
+
+<li><b>The Distance From Face Space Method</b>. Briefly describe the method of Turk and Pentland on which this practical is based. It is not necessary to reproduce all the maths - credit will be awarded for evidence of an understanding of the principles by which it works. [10]
+
+<li><b>Experiments</b>. A description of any investigations you performed, including, i) the effect of image transformations on the DFFS; [10] ii) experiments with different distance metrics; [10] iii) results of running the search code and varying the step sizes; [10] iv) results of attempting to locate the faces from the DFFS map data. [20]
+
+Describe any improvements that you may have made to the technique to get the system to run reliably on the M4 test data. [10]
+
+<li><b>Conclusion</b>. Summarise any conclusions that you may have drawn from your experiments. In particular, you should consider the merits of the Turk and Pentland face detection technique in terms of its computational efficiency, accuracy, ease of implementation and so on. [10]
+
+<li><b>References</b>. A list of journal and conference articles, books and web links etc. which have been cited in the text. [10]
+</ul>
+
+(Figures in square brackets indicate approximate weight to be given to each section.)						
+      <h2> Extra Help </h2>
+	  <ul>
+	    <li> The answers to some questions that have been asked are <a href="answers.txt">here</a>.
+	      </ul>
+	If you are having difficulties getting started email for help.
+	
+      <h2> Data </h2>
+Here is a summary of the data you will need:
+<ul>
+<li> AT&T <b>training</b> data - <a href="faces.tif">http://www.dcs.shef.ac.uk/~jon/campus_only/teaching/COM4120/assignment/faces.tif</a>
+<li> M4 <b>test</b> data - <a href="m4_image.bmp">http://www.dcs.shef.ac.uk/~jon/campus_only/teaching/COM4120/assignment/m4_image.bmp</a>
+<li> Matlab code:
+<ul>
+<li> <a href="loadfaces.m">loadfaces.m</a>
+<li><a href="eigenface.m">eigenface.m</a>
+<li> <a href="calc_meanface.m">calc_meanface.m</a>
+<li> <a href="display_eigenface.m">display_eigenface.m</a> 
+<li><a href="project.m">project.m</a>
+<li> <a href="distance.m">distance.m</a>
+	      <li> <a href="load_testscene.m">load_testscene.m</a>
+<li>  <a href="search.m">search.m</a>
+</ul>
+
+<li> <a href="assignment.pdf">PDF</a> version of this page.
+</ul>
+
+<!--
+						  
+<h2> Result </h2>
+
+The figure below shows what you should see once search.m has completed with an xstep and ystep of 2, using a 15 dimensional facespace, and using just the 1st 200 faces for generating the eigenfaces. (The panel on the left is the current subimage, the centre panel is the eigenface reconstruction, and the panel on the right is the DFFS map).
+ <p>     
+<img SRC="search_result.gif" width=350>
+  <p>    
+As you can see, face locations in the original image correspond to  low values in the DFFS map. But unfortunately there are large regions of small distances that do not correspond to faces - particularly the subimage covers a uniform dark or light region in the image.
+
+-->
+						  
+<h2>Some Useful References</h2>
+
+<ul>
+<li> <a href="../papers/jcn.pdf">Eigenfaces for recognition</a>, Turk and Pentland, JCN, 1991
+<li> <a href="../papers/mturk-CVPR91.pdf">Face recogntion using Eigenfaces</a>, Turk and Pentland, CVPR, 1991	    
+<li> <a href="../papers/aws-avbpa.pdf">Face and feature finding for a face recognition system</a>, A.W.Senior, Proc. AVBPA 1999, pp 154-159, Washington
+<li> <a href="../papers/moghaddam98beyond.pdf">Beyond Eigenfaces: Probabilistic matching for face recognition</a> Moghaddam, Wahid and Pentland, 1998
+<li> ART Lectures 4 & 5.
+</ul>
+
+<address> 
+
+<HR size=2 noshade align=center> 
+<address> 
+<a href="mailto:jon@dcs.shef.ac.uk">Jon Barker</a></address>
+<!-- Created: Wed Jun 11 09:57:05 BST 1997 -->
+<!-- hhmts start -->
+Last modified: Wed Nov 28 09:29:52 GMT 2007
+<!-- hhmts end -->
+</body>
+</html>

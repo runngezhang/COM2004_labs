@@ -1,0 +1,113 @@
+
+2012
+
+f0=[618   590   577   554   496   464   460   442   313    255]; % 98 95.5 Josh 
+f1=[617   256   526   528   464   584   314   431   490   524] ; %  96.5 91 Florin 2
+f2=[ 309 316 410 434 472 497 519 530 610 646]; %  96.0 92  Shaun Smith, David Paterson, Matthew Dewhirst, Tom White
+f3=[526   530   280   431   492   318   489   615   463   258] ; % 95.0 92  Luke Heavens and Ben Carr
+f4=[572   285   705   337   676   463   583   588   460   497]; %   93.0 89.0 Florin-Christian Gavrila  
+f5=[589 464 434 559 618 313 429 617 435 588] ;  % 81.0 88.0  Maksim Veljovic   
+
+
+2011
+
+[463 615 460 316 590 310 382 525 367 1] 99.5  93   Mike Goddard  Callum Cox and Matt Raymond
+[598   490   616   398   434   439   622   253   249   610]  94      89.5 Domonic Ellam
+[217   224   231   427   434   441   637   644   651   339]  88    81.5  T Archer 
+
+1     99.5    94.5    Radu Popescu   (2010 
+2     95.5    94       He Hui Lim    (2010)
+
+1 - 99.5  93  Mike Goddard, Callum Cox, Matt Raymond
+2 - 94    89.5  Domonic Ellam
+3 - 88    81.5  T Archer
+
+[463 615 460 316 590 310 382 525 367 1] 99.5  93   Mike Goddard  Callum Cox and Matt Raymond
+[598   490   616   398   434   439   622   253   249   610]  94      89.5 Domonic Ellam
+[217   224   231   427   434   441   637   644   651   339]  88    81.5  T Archer 
+
+
+
+2010
+
+
+1   99.5    94.5    [310   318   429   436   442   463   525   553   560   644]  Radu Popescu <RMPopescu1@sheffield.ac.uk> 
+2   98       92.5    [3   313   413   429   431   435   468   586   615   621] David Elston <DSElston1@sheffield.ac.uk>  
+3   97       86.5    [313 499 8 406 611 399 651 92 584 471]  LS Dalchow <LSDalchow1@sheffield.ac.uk> 
+4   96       92.5    [285 311 433 454 488 491 503 588 614 638]  Robert White <RWWhite1@sheffield.ac.uk>  
+5   95.5    94       [311 321 431 435 442 581 585 589 399 613]    He Hui Lim 
+6   93       91.5    [285 309 353 400 440 471 559 523 614 683] Dom Wroblewski <DWroblewski1@sheffield.ac.uk> 
+6   93       91.5    [311   321   610   620   432   436   441   335   430   615] MC Chow
+6   93       91.5    [283   284   314   315   440   459   559   589   616   617]A Srivastava 
+9   91.5    89       [310 315 320 405 460 470 525 610 615 620]  I Pozella <IPozella1@sheffield.ac.uk> 
+10   87.5    88.5    [154 227 315 367 426 460 555 616 640 710] L James <LJames1@sheffield.ac.uk> 
+11   84.5    90       [340   258   312   463   473   760   647   652   466   579] JS Percival <aca08jsp@sheffield.ac.uk> 
+11 84.5    86       [434   311   580   373   561   560   348   320   285   490]  I Cozianu <ISCozianu1@sheffield.ac.uk>
+11 84.5    86.5    [499   429   502   313   315   588   589   464   434   345] RA Busuioc <RABusuioc1@sheffield.ac.uk> 
+14 82       83       [618   616   588   589   558   584   619   463   501   316] Bob Vale <RDVale1@sheffield.ac.uk>
+15 59       69.5    [250 262 308 324 458 474 609 653 702 741] L Straker <LStraker1@sheffield.ac.uk>
+
+
+
+
+1   99.5    94.5    [310   318   429   436   442   463   525   553   560   644]  Radu Popescu <RMPopescu1@sheffield.ac.uk> 
+5   95.5    94       [311 321 431 435 442 581 585 589 399 613]    He Hui Lim  
+2   98       92.5    [3   313   413   429   431   435   468   586   615   621] David Elston <DSElston1@sheffield.ac.uk>  
+4   96       92.5    [285 311 433 454 488 491 503 588 614 638]  Robert White <RWWhite1@sheffield.ac.uk>   
+6   93       91.5    [285 309 353 400 440 471 559 523 614 683] Dom Wroblewski <DWroblewski1@sheffield.ac.uk> 
+6   93       91.5    [311   321   610   620   432   436   441   335   430   615] MC Chow 
+6   93       91.5    [283   284   314   315   440   459   559   589   616   617]A Srivastava  
+11 84.5    90       [340   258   312   463   473   760   647   652   466   579] JS Percival <aca08jsp@sheffield.ac.uk>  
+9   91.5    89       [310 315 320 405 460 470 525 610 615 620]  I Pozella <IPozella1@sheffield.ac.uk> 
+10   87.5    88.5    [154 227 315 367 426 460 555 616 640 710] L James <LJames1@sheffield.ac.uk> 
+3   97       86.5    [313 499 8 406 611 399 651 92 584 471]  LS Dalchow <LSDalchow1@sheffield.ac.uk> 
+11 84.5    86.5    [499   429   502   313   315   588   589   464   434   345] RA Busuioc <RABusuioc1@sheffield.ac.uk> 
+11 84.5    86       [434   311   580   373   561   560   348   320   285   490]  I Cozianu <ISCozianu1@sheffield.ac.uk>
+14 82       83       [618   616   588   589   558   584   619   463   501   316] Bob Vale <RDVale1@sheffield.ac.uk>
+15 59       69.5    [250 262 308 324 458 474 609 653 702 741] L Straker <LStraker1@sheffield.ac.uk>
+
+
+
+1   99.5    [310   318   429   436   442   463   525   553   560   644]  
+2   98       [3   313   413   429   431   435   468   586   615   621] 
+3   97       [313 499 8 406 611 399 651 92 584 471] 
+4   96       [285 311 433 454 488 491 503 588 614 638] 
+5   95.5    [311 321 431 435 442 581 585 589 399 613]
+6   93       [285 309 353 400 440 471 559 523 614 683]
+6   93       91.5    [311   321   610   620   432   436   441   335   430   615] MC Chow 
+6   93       91.5    [283   284   314   315   440   459   559   589   616   617]A Srivastava  
+9   91.5    [310 315 320 405 460 470 525 610 615 620]
+10   87.5    [154 227 315 367 426 460 555 616 640 710]
+11 84.5    [340   258   312   463   473   760   647   652   466   579] 
+11 84.5    [434   311   580   373   561   560   348   320   285   490]
+11 84.5    [499   429   502   313   315   588   589   464   434   345]
+14 82       [618   616   588   589   558   584   619   463   501   316]
+15 59       [250 262 308 324 458 474 609 653 702 741]
+
+
+1   99.5    94.5    [310   318   429   436   442   463   525   553   560   644]  
+5   95.5    94       [311 321 431 435 442 581 585 589 399 613]   
+2   98       92.5    [3   313   413   429   431   435   468   586   615   621] 
+4   96       92.5    [285 311 433 454 488 491 503 588 614 638] 
+6   93       91.5    [285 309 353 400 440 471 559 523 614 683]
+6   93       91.5    [311   321   610   620   432   436   441   335   430   615] MC Chow 
+6   93       91.5    [283   284   314   315   440   459   559   589   616   617]A Srivastava   
+10 84.5    90       [340   258   312   463   473   760   647   652   466   579] JS Percival <aca08jsp@sheffield.ac.uk>  
+8   91.5    89       [310 315 320 405 460 470 525 610 615 620]  I Pozella <IPozella1@sheffield.ac.uk> 
+9   87.5    88.5    [154 227 315 367 426 460 555 616 640 710] L James <LJames1@sheffield.ac.uk> 
+3   97       86.5    [313 499 8 406 611 399 651 92 584 471]  LS Dalchow <LSDalchow1@sheffield.ac.uk> 
+11 84.5    86.5    [499   429   502   313   315   588   589   464   434   345] RA Busuioc <RABusuioc1@sheffield.ac.uk> 
+10 84.5    86       [434   311   580   373   561   560   348   320   285   490]  I Cozianu <ISCozianu1@sheffield.ac.uk>
+13 82       83       [618   616   588   589   558   584   619   463   501   316] Bob Vale <RDVale1@sheffield.ac.uk>
+14 59       69.5    [250 262 308 324 458 474 609 653 702 741] L Straker <LStraker1@sheffield.ac.uk>
+
+
+
+1     99.5    94.5    Radu Popescu 
+2     95.5    94       He Hui Lim  
+3=   98      92.5    David Elston 
+3=   96      92.5    Robert White 
+5=   93      91.5     Dom Wroblewski 
+5=   93      91.5     MC Chow
+5=   93      91.5     A Srivastava   
+

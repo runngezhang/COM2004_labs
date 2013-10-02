@@ -1,0 +1,1 @@
+The lab sheet for Week 8 has been reworded because in the previous year tha lab was after the lecture so the students would already have seen the PCA theory - this year the lab is having to introduce PCA. ughh.
