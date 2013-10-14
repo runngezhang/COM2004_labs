@@ -1,9 +1,9 @@
-% Problem 2, Attempt 2
+% Problem 2, Attempt 3
 % time = 0.020921 seconds.
 
 tic;
 randNums = rand(1000000,1);
-diffs = abs(randNums(2:end)-randNums(1:end-1));
+diffs = abs(diff(randNums));
 
 smallestDiff = min(diffs)
 largestDiff = max(diffs)

@@ -1,12 +1,9 @@
-% Problem 3, Attempt 2
+% Problem 3, Attempt 3
 % time = 0.019028 seconds.
 
 tic;
 
-nums = zeros(1000);
-for i = 1 : 1000
-    nums(i, :) = i ./ (1 : 1000);
-end
+nums = (1:1000)' * (1./(1:1000));
 
 diffs = abs(nums - (pi / 4));
 
