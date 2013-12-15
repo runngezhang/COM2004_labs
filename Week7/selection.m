@@ -31,8 +31,8 @@ for nfeatures=1:9
     for i=1:900
       cm=corrcoef(train_data(:,feature(n)), train_data(:,i));
       %	    cm
-      %	    c=cm(1,2);
-      corR(1,i) = corR(1,i)+ cm;
+      c=cm(1,2);
+      corR(1,i) = corR(1,i)+ c;
     end
   end
   
