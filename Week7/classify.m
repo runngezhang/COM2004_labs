@@ -16,6 +16,7 @@ test = test(:, features);
 
 % Super compact implementation of nearest neighbour 
 x= test * train';
+x(1,1)
 modtest=sqrt(sum(test.*test,2));
 modtrain=sqrt(sum(train.*train,2));
 dist = x./(modtest*modtrain'); % cosine distance
